@@ -5,4 +5,13 @@ const sayFullName = () => {
     console.log(`${firstName} ${lastName}`);
 };
 
-console.log(module);
+// module.exports.firstName = firstName;
+// 
+
+exports.firstName = firstName;
+exports.lastName = lastName;
+exports.sayFullName = sayFullName;
+this.qualquer = 'qualquer';
+
+
+//console.log(module.exports);
