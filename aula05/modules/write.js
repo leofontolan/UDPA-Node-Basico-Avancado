@@ -1,6 +1,5 @@
 const fs = require('fs').promises;
 
-
-module.exports = (pathFile, data) => {
-    fs.writeFile(pathFile, data, { encoding: 'utf8', flag: 'w' })
+module.exports = (filePath, fileData) => {
+  fs.writeFile(filePath, fileData, { flag: 'w', encoding: 'utf8' });
 };
