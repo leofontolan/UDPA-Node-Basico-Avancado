@@ -10,6 +10,7 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 app.set('views', path.resolve(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
 
+//MIDDLEWARE
 app.use(meuMiddleware);
 app.use(routes);
 
