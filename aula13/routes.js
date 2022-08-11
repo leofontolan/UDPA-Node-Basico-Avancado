@@ -4,6 +4,7 @@ const homeController = require('./src/controllers/homeController');
 const contatoController = require('./src/controllers/contatoController');
 
 
+
 //ROTAS DA HOME
 router.get("/", homeController.paginaInicial);
 router.post("/", homeController.trataPost);
