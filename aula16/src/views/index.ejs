@@ -13,9 +13,11 @@
     <section class="container">
 
         <h1>
-            <%= title %><br>
-            <%- title %>
-
+            <% if(typeof title !== 'undefined') { %>
+                <%= title %>
+            <% }else {%>
+                Não existe título
+            <% }%>
         </h1>
 
         <h1>Título do Execício</h1>
