@@ -1,5 +1,3 @@
 exports.paginaInicial = (req, res) => {
-    res.send(`
-          <h1>Obrigado por entrar em contato!</h1>
-      `);
+  res.send('Obrigado por entrar em contato.');
 };

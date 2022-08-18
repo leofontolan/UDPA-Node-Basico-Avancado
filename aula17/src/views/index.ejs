@@ -1,40 +1,14 @@
 <%- include('includes/head'); %>
 
+<section class="container">
+  <h1><%= csrfToken %></h1>
 
-
-    <section class="container">
-
-        <h1><%= umaVariavelLocal  %> </h1>
-
-        <h1>
-            <% if(typeof title !== 'undefined') { %>
-                <%= title %>
-            <% }else {%>
-                Não existe título
-            <% }%>
-        </h1>
-
-        <h2>
-            <% numbers.forEach(num => { %>
-                <%= num %><br>
-            <% });%>
-        </h2>
-
-
-        <h1>Título do Execício</h1>
-
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident amet quasi voluptas esse officiis magnam
-            recusandae molestias ad ipsa, voluptatibus vel quod dolore consectetur voluptatum? Saepe eius
-            assumenda repellat dolorem?
-        </p>
-
-        <form action="/" method="post">
-            <label>Cliente</label>
-            <input type="text" name="name" id="">
-            <button type="submit">Enviar</button>
-        </form>
-
-    </section>
-
+  <form action="/" method="post">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    <label>Cliente</label>
+    <input type="text" name="cliente">
+    <button>Submit</button>
+  </form>
+</section>
 
 <%- include('includes/footer'); %>
